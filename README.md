@@ -30,7 +30,7 @@ class SniffConfigParse : public ISniffConfig
 SniffConfigParse(std::string config_file) : config_file_(config_file) {}
 ```
 2. 解析文件，格式如下
-``` c++
+```json
 {
     "proto": {
         "name": "http",
@@ -52,5 +52,5 @@ BOOST_DLL_ALIAS(
 ***相当于导出C函数，不是C++函数***
 ```c++
 const void * create_parse_config = reinterpret_cast<const void*>(reinterpret_cast<intptr_t>(&sniff_proto::SniffConfigParse::get_sniff_config ));
-extern "C" __declspec(dllexport) create_parse_config;
+extern "C" __declspec(dllexport) void* create_parse_config;
 ```
