@@ -18,7 +18,7 @@ public:
     VIRTUAL_METHOD const SniffProtoConfig CALL_METHOD get_sniff_proto() PURE_VIRTUAL;
     VIRTUAL_METHOD const char*  CALL_METHOD get_error_message() PURE_VIRTUAL;
 };
-    ```
+```
 ### 接口实现
 **SniffConfigParse继承ISniffConfig**
 ```c++
